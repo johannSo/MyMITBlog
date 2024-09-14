@@ -20,6 +20,24 @@ body {
   object-fit: cover;
 }
 
+.links {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  margin-right: 50px;
+  display: inline-block;  /* Fügt diese Zeile hinzu */
+}
+
+.links:last-of-type {
+  margin-right: 0;
+}
+
+.logo2 {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
 .content {
   padding: 20px;
   text-align: center;  /* Neue Zeile */

@@ -1,6 +1,9 @@
 import React from 'react';
-import logo from './assets/logo.jpeg';
+import logo from './assets/logo.png';
 import './App.css';
+import github from './assets/github.svg';
+import gitlab from './assets/gitlab.svg';
+
 
 function App() {
   return (
@@ -9,9 +12,17 @@ function App() {
         <img src={logo} alt="Logo des Blogs" className="logo" />
       </header>
       <div className="content">
-        <h1>The Squirrel's Blog</h1>
-        {/* Hier kommt der Rest Ihres Inhalts */}
+        <img src={logo} alt="Logo des Blogs" className="logo2" />
+        <h1>My MIT Blog</h1>
+        <h3>By Jonathan Soppa</h3>
+        <a href="https://github.com/johannSo" target="_blank" rel="noopener noreferrer">
+          <img src={github} alt="GitHub" className="links" />
+        </a>
+        <a href="https://gitlab.com/johannSo" target="_blank" rel="noopener noreferrer">
+          <img src={gitlab} alt="GitLab" className="links" />
+        </a>
       </div>
+      <div className="mine"></div>
     </div>
   );
 }
