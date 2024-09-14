@@ -3,7 +3,7 @@ import logo from './assets/logo.png';
 import './App.css';
 import github from './assets/github.svg';
 import gitlab from './assets/gitlab.svg';
-
+import enigma from './assets/enigma.png';  // Stellen Sie sicher, dass dieser Import vorhanden ist
 
 function App() {
   return (
@@ -22,7 +22,9 @@ function App() {
           <img src={gitlab} alt="GitLab" className="links" />
         </a>
       </div>
-      <div className="mine"></div>
+      <div className="mine">
+        <img src={enigma} alt="Enigma" className="rounded-image" />
+      </div>
     </div>
   );
 }

@@ -85,3 +85,15 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+.rounded-image {
+  border-radius: 15px;  /* Sie können diesen Wert anpassen */
+  overflow: hidden;
+  max-width: 100%;  /* Stellt sicher, dass das Bild nicht über den Container hinausragt */
+  height: auto;  /* Behält das Seitenverhältnis bei */
+}
+
+.mine {
+  margin-top: 20px;  /* Fügt etwas Abstand oberhalb des Bildes hinzu */
+  text-align: center;  /* Zentriert das Bild horizontal */
+}
