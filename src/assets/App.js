@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import logo from './assets/logo.png';
 import './App.css';
 import github from './assets/github.svg';
@@ -8,7 +7,7 @@ import enigma from './assets/enigma.png';
 import soon from './assets/soon.jpg';
 import EnigmaPage from './EnigmaPage';
 
-function Home() {
+function App() {
   return (
     <div className="app-container">
       <header className="header">
@@ -26,26 +25,15 @@ function Home() {
         </a>
       </div>
       <div className="mine">
-        <Link to="/enigma">
+        <a href="https://github.com/johannSo/enigma" target="_blank" rel="noopener noreferrer">
           <img src={enigma} alt="Enigma" className="rounded-image" />
-        </Link>
+        </a>
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a href="#" target="_blank" rel="noopener noreferrer">
           <img src={soon} alt="soon" className="rounded-image" />
         </a>
       </div>
     </div>
-  );
-}
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/enigma" element={<EnigmaPage />} />
-      </Routes>
-    </Router>
   );
 }
 

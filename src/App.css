@@ -20,6 +20,12 @@ body {
   object-fit: cover;
 }
 
+.cover {
+  border-radius: 15px;
+  overflow: hidden;
+
+}
+
 .links {
   width: 28px;
   height: 28px;
@@ -87,13 +93,32 @@ h1 {
 }
 
 .rounded-image {
-  border-radius: 15px;  /* Sie können diesen Wert anpassen */
+  border-radius: 15px;
   overflow: hidden;
-  max-width: 100%;  /* Stellt sicher, dass das Bild nicht über den Container hinausragt */
-  height: auto;  /* Behält das Seitenverhältnis bei */
+  width: 250px;  /* Setzt eine feste Breite */
+  height: 250px;  /* Setzt eine feste Höhe */
+  object-fit: cover;  /* Behält das Seitenverhältnis bei und füllt den Container */
+  max-width: 100%;  /* Verhindert Überlauf auf sehr kleinen Bildschirmen */
+  margin-bottom: 20px;  /* Fügt Abstand hinzu, wenn die Bilder umbrechen */
 }
 
 .mine {
-  margin-top: 20px;  /* Fügt etwas Abstand oberhalb des Bildes hinzu */
-  text-align: center;  /* Zentriert das Bild horizontal */
+  margin: 20px auto;
+  width: 600px;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;  /* Erlaubt das Umbrechen auf kleineren Bildschirmen */
+}
+
+@media (max-width: 600px) {
+  .mine {
+    gap: 20px;  /* Reduziert den Abstand auf kleineren Bildschirmen */
+  }
+  
+  .rounded-image {
+    width: 200px;  /* Macht die Bilder etwas kleiner auf kleineren Bildschirmen */
+    height: 200px;
+  }
 }
