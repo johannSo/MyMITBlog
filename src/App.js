@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import logo from './assets/logo.png';
 import './App.css';
+import { Helmet } from 'react-helmet';
 import github from './assets/github.svg';
 import gitlab from './assets/gitlab.svg';
 import enigma from './assets/enigma.png';
@@ -9,15 +10,19 @@ import soon from './assets/soon.jpg';
 import EnigmaPage from './EnigmaPage';
 
 function Home() {
+  const containerRef = useRef(null); // Hier definieren wir containerRef
+
   return (
-    <div className="app-container">
+    <div ref={containerRef} className="app-container">
+      <Helmet>
+      <title>Portfolio</title>
+    </Helmet>
       <header className="header">
         <img src={logo} alt="Logo des Blogs" className="logo" />
       </header>
       <div className="content">
         <img src={logo} alt="Logo des Blogs" className="logo2" />
-        <h1>My MIT Blog</h1>
-        <h3>By JoSo</h3>
+        <h1 className="h1">Hi</h1>
         <a href="https://github.com/johannSo" target="_blank" rel="noopener noreferrer">
           <img src={github} alt="GitHub" className="links" />
         </a>
@@ -29,10 +34,6 @@ function Home() {
         <Link to="/enigma">
           <img src={enigma} alt="Enigma" className="rounded-image" />
         </Link>
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <img src={soon} alt="soon" className="rounded-image" />
-        </a>
       </div>
     </div>
   );
