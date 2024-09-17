@@ -17,7 +17,7 @@ function Home() {
       <div className="content">
         <img src={logo} alt="Logo des Blogs" className="logo2" />
         <h1>My MIT Blog</h1>
-        <h3>By Jonathan Soppa</h3>
+        <h3>By JoSo</h3>
         <a href="https://github.com/johannSo" target="_blank" rel="noopener noreferrer">
           <img src={github} alt="GitHub" className="links" />
         </a>
