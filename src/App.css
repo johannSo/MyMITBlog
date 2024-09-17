@@ -1,8 +1,10 @@
-body {
+body, html {
   background-color: #f5f3eb;
   margin: 0;
   padding: 0;
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 
 .header {
   background-color: white;
@@ -122,3 +124,55 @@ h1 {
     height: 200px;
   }
 }
+
+.banner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.funfact-banner {
+  max-width: 300px; /* Reduziert von 800px auf 600px */
+  width: 80%; /* Nimmt nur 80% der Containerbreite ein */
+  height: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bounce-in {
+  opacity: 0;
+}
+
+.bounce-in.visible {
+  animation: bounceIn 0.6s ease-out forwards;
+}
+
+/* Verzögerung für jedes Element */
+.bounce-in:nth-child(1) { animation-delay: 0.1s; }
+.bounce-in:nth-child(2) { animation-delay: 0.2s; }
+.bounce-in:nth-child(3) { animation-delay: 0.3s; }
+.bounce-in:nth-child(4) { animation-delay: 0.4s; }
+.bounce-in:nth-child(5) { animation-delay: 0.5s; }
